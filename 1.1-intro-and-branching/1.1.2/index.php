@@ -1,16 +1,17 @@
 <?php
 $dayOfWeek = date("N");
-$fullHour = date("H");
+$fullHour = date("G");
 
-if ((6 <= $fullHour)&&($fullHour < 10.59)) {
+
+if ((6 <= $fullHour)&&($fullHour < 11)) {
     $image = "img/morning.jpg";
-} elseif ((11 <= $fullHour)&&($fullHour < 17.59))  {
+} elseif ((11 <= $fullHour)&&($fullHour < 18))  {
     $image = "img/day.jpg";
-} elseif ((18 <= $fullHour)&&($fullHour < 22.59))  {
+} elseif ((18 <= $fullHour)&&($fullHour < 23))  {
     $image = "img/evening.jpg";
-}  elseif ((23 <= $fullHour)&&($fullHour < 23.59))  {
+}  elseif ((23 <= $fullHour)&&($fullHour < 0))  {
     $image = "img/night.jpg";
-}  elseif ((0 <= $fullHour)&&($fullHour < 05.59))  {
+}  elseif ((0 <= $fullHour)&&($fullHour < 6))  {
     $image = "img/night.jpg";
 }
 ?>
@@ -27,15 +28,15 @@ if ((6 <= $fullHour)&&($fullHour < 10.59)) {
     <section class="greeting">
         <p>
             <?php 
-            if ((6 <= $fullHour)&&($fullHour < 10.59)) {
+            if ((6 <= $fullHour)&&($fullHour < 11)) {
                 echo "Доброе утро!";
-            } elseif ((11 <= $fullHour)&&($fullHour < 17.59))  {
+            } elseif ((11 <= $fullHour)&&($fullHour < 18))  {
                 echo "Добрый день!";
-            } elseif ((18 <= $fullHour)&&($fullHour < 22.59))  {
+            } elseif ((18 <= $fullHour)&&($fullHour < 23))  {
                 echo "Добрый вечер!";
-            }  elseif ((23 <= $fullHour)&&($fullHour < 23.59))  {
+            }  elseif ((23 <= $fullHour)&&($fullHour < 0))  {
                 echo "Доброй ночи!";
-            }  elseif ((0 <= $fullHour)&&($fullHour < 05.59))  {
+            }  elseif ((0 <= $fullHour)&&($fullHour < 6))  {
                 echo "Доброй ночи!";
             }?>
         </p>
